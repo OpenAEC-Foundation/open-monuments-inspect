@@ -9,8 +9,6 @@ app_license = "lgpl-3.0"
 
 required_apps = ["frappe", "erpnext", "monuments_core"]
 
-hide_in_desk = 1
-
 fixtures = [
     {
         "dt": "Role",
@@ -28,5 +26,3 @@ doc_events = {
         "before_save": "monuments_inspect.monuments_inspect.doctype.thermografische_inspectie.thermografische_inspectie.bereken_delta_t",
     },
 }
-
-app_documentation = "https://github.com/OpenAEC-Foundation/Open-Monuments/tree/main/apps/inspect"
