@@ -1,0 +1,117 @@
+{
+  "name": "ThermografischeInspectie",
+  "module": "Monuments Inspect",
+  "doctype": "DocType",
+  "track_changes": 1,
+  "description": "Thermografisch onderzoek als apart inspectie-type (F-THERM-001)",
+  "fields": [
+    {
+      "fieldname": "inspectie",
+      "fieldtype": "Link",
+      "label": "Gekoppelde inspectie",
+      "options": "Inspectie",
+      "reqd": 1
+    },
+    {
+      "fieldname": "datum",
+      "fieldtype": "Date",
+      "label": "Datum",
+      "reqd": 1,
+      "default": "Today"
+    },
+    {
+      "fieldname": "omstandigheden_tab",
+      "fieldtype": "Tab Break",
+      "label": "Meetomstandigheden"
+    },
+    {
+      "fieldname": "temperatuur_buiten",
+      "fieldtype": "Float",
+      "label": "Buitentemperatuur (°C)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "temperatuur_binnen",
+      "fieldtype": "Float",
+      "label": "Binnentemperatuur (°C)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "delta_t",
+      "fieldtype": "Float",
+      "label": "ΔT (K)",
+      "read_only": 1,
+      "description": "Automatisch berekend: |binnen - buiten|. Waarschuwing bij ΔT < 10°C (F-THERM-002)"
+    },
+    {
+      "fieldname": "delta_t_waarschuwing",
+      "fieldtype": "Check",
+      "label": "ΔT waarschuwing actief",
+      "read_only": 1,
+      "description": "True als ΔT < 10K — meting mogelijk onbetrouwbaar"
+    },
+    {
+      "fieldname": "luchtvochtigheid",
+      "fieldtype": "Float",
+      "label": "Relatieve luchtvochtigheid (%)"
+    },
+    {
+      "fieldname": "windkracht",
+      "fieldtype": "Select",
+      "label": "Windkracht (Beaufort)",
+      "options": "\n0\n1\n2\n3\n4\n5"
+    },
+    {
+      "fieldname": "zonnestraling",
+      "fieldtype": "Select",
+      "label": "Zonnestraling afgelopen 24u",
+      "options": "\nGeen\nGering\nMatig\nSterk"
+    },
+    {
+      "fieldname": "camera_tab",
+      "fieldtype": "Tab Break",
+      "label": "Camera-instellingen"
+    },
+    {
+      "fieldname": "camera_merk_model",
+      "fieldtype": "Data",
+      "label": "Camera merk/model"
+    },
+    {
+      "fieldname": "emissiviteit",
+      "fieldtype": "Float",
+      "label": "Emissiviteit (ε)",
+      "description": "Standaard 0.95 voor meeste bouwmaterialen"
+    },
+    {
+      "fieldname": "reflectie_temperatuur",
+      "fieldtype": "Float",
+      "label": "Reflectieve temperatuur (°C)"
+    },
+    {
+      "fieldname": "resultaten_tab",
+      "fieldtype": "Tab Break",
+      "label": "Bevindingen"
+    },
+    {
+      "fieldname": "bevindingen",
+      "fieldtype": "Long Text",
+      "label": "Bevindingen en interpretatie"
+    },
+    {
+      "fieldname": "aanbevelingen",
+      "fieldtype": "Long Text",
+      "label": "Aanbevelingen"
+    },
+    {
+      "fieldname": "gecertificeerd_inspecteur",
+      "fieldtype": "Check",
+      "label": "Uitgevoerd door gecertificeerd thermograaf (ITC Level II of hoger)",
+      "description": "F-THERM-006 vereiste"
+    }
+  ],
+  "permissions": [
+    { "role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Inspecteur", "read": 1, "write": 1, "create": 1 }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2026-03-24 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "description": "Inspectie-bevinding per bouwdeel/element, met NEN 2767 scoring en ERM-gebrekenregistratie",
+ "track_changes": 1,
+ "field_order": [
+  "inspectie",
+  "element_naam",
+  "element_pad",
+  "column_break_beoordeling",
+  "beoordeling",
+  "indicering",
+  "structuur_type",
+  "parent_node_id",
+  "section_tekst",
+  "tekst",
+  "hersteladvies",
+  "tijdscategorie",
+  "section_nen2767",
+  "bouwdeel",
+  "erm_code",
+  "column_break_nen2767",
+  "intensiteit",
+  "omvang",
+  "conditiescore",
+  "section_herstel",
+  "restauratieladder",
+  "locatie_omschrijving",
+  "urgentie",
+  "section_meta",
+  "bron"
+ ],
+ "fields": [
+  {
+   "fieldname": "inspectie",
+   "fieldtype": "Link",
+   "label": "Inspectie",
+   "options": "Inspectie",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "element_naam",
+   "fieldtype": "Data",
+   "label": "Element",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "element_pad",
+   "fieldtype": "Small Text",
+   "label": "Pad in bouwdelenboom"
+  },
+  {
+   "fieldname": "column_break_beoordeling",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "beoordeling",
+   "fieldtype": "Int",
+   "label": "Beoordeling (1-4)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "indicering",
+   "fieldtype": "Data",
+   "label": "Indicering (G/R/M/S)"
+  },
+  {
+   "fieldname": "structuur_type",
+   "fieldtype": "Int",
+   "label": "Type (1-6)"
+  },
+  {
+   "fieldname": "parent_node_id",
+   "fieldtype": "Int",
+   "label": "Parent node ID"
+  },
+  {
+   "fieldname": "section_tekst",
+   "fieldtype": "Section Break",
+   "label": "Tekst en herstel"
+  },
+  {
+   "fieldname": "tekst",
+   "fieldtype": "Text",
+   "label": "Bevindingstekst"
+  },
+  {
+   "fieldname": "hersteladvies",
+   "fieldtype": "Text",
+   "label": "Hersteladvies"
+  },
+  {
+   "fieldname": "tijdscategorie",
+   "fieldtype": "Select",
+   "label": "Tijdscategorie",
+   "options": "\n0-1 jaar\n1-3 jaar\n3-6 jaar\n6-10 jaar\nGeen actie"
+  },
+  {
+   "fieldname": "section_nen2767",
+   "fieldtype": "Section Break",
+   "label": "NEN 2767 scoring",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "bouwdeel",
+   "fieldtype": "Link",
+   "label": "Bouwdeel",
+   "options": "Bouwdeel"
+  },
+  {
+   "fieldname": "erm_code",
+   "fieldtype": "Data",
+   "label": "ERM-gebrekencode",
+   "description": "Bijv. ST-003 (steenwerk: voegwerk uitvallen)"
+  },
+  {
+   "fieldname": "column_break_nen2767",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intensiteit",
+   "fieldtype": "Select",
+   "label": "Intensiteit",
+   "options": "\n1 - Gering\n2 - Matig\n3 - Ernstig"
+  },
+  {
+   "fieldname": "omvang",
+   "fieldtype": "Select",
+   "label": "Omvang",
+   "options": "\n1 - < 2%\n2 - 2-10%\n3 - 10-30%\n4 - 30-70%\n5 - > 70%"
+  },
+  {
+   "fieldname": "conditiescore",
+   "fieldtype": "Int",
+   "label": "Conditiescore (1-6)",
+   "description": "Automatisch berekend via IxO-matrix (NEN 2767 tabel 3)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_herstel",
+   "fieldtype": "Section Break",
+   "label": "Herstel",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "restauratieladder",
+   "fieldtype": "Select",
+   "label": "Restauratieladder advies",
+   "options": "\nBehouden\nHerstellen\nKopie\nNabootsen\nVervangen"
+  },
+  {
+   "fieldname": "locatie_omschrijving",
+   "fieldtype": "Data",
+   "label": "Locatie (vrije tekst)",
+   "description": "Bijv. 'Noord-transept, tweede travee van oost'"
+  },
+  {
+   "fieldname": "urgentie",
+   "fieldtype": "Select",
+   "label": "Urgentie",
+   "options": "\nRoutine\nSpoedig\nUrgent\nNoodmaatregel"
+  },
+  {
+   "fieldname": "section_meta",
+   "fieldtype": "Section Break",
+   "label": "Metadata",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "bron",
+   "fieldtype": "Select",
+   "label": "Bron",
+   "options": "Inspectio2\nOpen-Monuments",
+   "default": "Open-Monuments"
+  }
+ ],
+ "links": [],
+ "modified": "2026-03-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Monuments Inspect",
+ "name": "Bevinding",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Monumentenwachter",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,296 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:inspectienummer",
+ "creation": "2026-03-24 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "is_submittable": 1,
+ "track_changes": 1,
+ "description": "NEN 2767 conditiemeting van een monument",
+ "field_order": [
+  "section_inspectie",
+  "inspectienummer",
+  "monument",
+  "inspecteur",
+  "column_break_datum",
+  "datum",
+  "jaar",
+  "column_break_type",
+  "type",
+  "status",
+  "section_resultaten",
+  "bevindingen",
+  "column_break_hersteladviezen",
+  "hersteladviezen",
+  "conditie_overall",
+  "section_stats",
+  "structuur_nodes",
+  "column_break_teksten",
+  "teksten",
+  "column_break_fotos",
+  "fotos",
+  "section_omstandigheden",
+  "weersomstandigheden",
+  "temperatuur_buiten",
+  "windkracht",
+  "section_opmerkingen",
+  "algemene_opmerkingen",
+  "aanbevelingen",
+  "section_bron",
+  "team",
+  "column_break_bron",
+  "bron",
+  "section_sync",
+  "last_modified_device",
+  "offline_timestamp"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_inspectie",
+   "fieldtype": "Section Break",
+   "label": "Inspectie"
+  },
+  {
+   "fieldname": "inspectienummer",
+   "fieldtype": "Data",
+   "label": "Inspectienummer",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "monument",
+   "fieldtype": "Link",
+   "label": "Monument",
+   "options": "Monument",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "inspecteur",
+   "fieldtype": "Data",
+   "label": "Inspecteur"
+  },
+  {
+   "fieldname": "column_break_datum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "datum",
+   "fieldtype": "Data",
+   "label": "Datum",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "jaar",
+   "fieldtype": "Int",
+   "label": "Jaar"
+  },
+  {
+   "fieldname": "column_break_type",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "R\nX\nB\nA\nE\nMW",
+   "default": "R",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Concept\nIn uitvoering\nAfgerond\nGearchiveerd",
+   "default": "Concept",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_resultaten",
+   "fieldtype": "Section Break",
+   "label": "Resultaten"
+  },
+  {
+   "fieldname": "bevindingen",
+   "fieldtype": "Int",
+   "label": "Bevindingen",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_hersteladviezen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hersteladviezen",
+   "fieldtype": "Int",
+   "label": "Hersteladviezen",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conditie_overall",
+   "fieldtype": "Int",
+   "label": "Overall conditiescore (1-6)",
+   "description": "Berekend via NEN 2767 gewogen gemiddelde"
+  },
+  {
+   "fieldname": "section_stats",
+   "fieldtype": "Section Break",
+   "label": "Statistieken",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "structuur_nodes",
+   "fieldtype": "Int",
+   "label": "Structuur nodes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_teksten",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "teksten",
+   "fieldtype": "Int",
+   "label": "Teksten",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fotos",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fotos",
+   "fieldtype": "Int",
+   "label": "Fotos",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_omstandigheden",
+   "fieldtype": "Section Break",
+   "label": "Omstandigheden",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "weersomstandigheden",
+   "fieldtype": "Select",
+   "label": "Weersomstandigheden",
+   "options": "\nZonnig\nBewolkt\nRegen\nSneeuw\nMist"
+  },
+  {
+   "fieldname": "temperatuur_buiten",
+   "fieldtype": "Float",
+   "label": "Buitentemperatuur"
+  },
+  {
+   "fieldname": "windkracht",
+   "fieldtype": "Select",
+   "label": "Windkracht (Beaufort)",
+   "options": "\n0\n1\n2\n3\n4\n5\n6\n7\n8"
+  },
+  {
+   "fieldname": "section_opmerkingen",
+   "fieldtype": "Section Break",
+   "label": "Opmerkingen",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "algemene_opmerkingen",
+   "fieldtype": "Long Text",
+   "label": "Algemene opmerkingen"
+  },
+  {
+   "fieldname": "aanbevelingen",
+   "fieldtype": "Long Text",
+   "label": "Aanbevelingen"
+  },
+  {
+   "fieldname": "section_bron",
+   "fieldtype": "Section Break",
+   "label": "Bron",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "team",
+   "fieldtype": "Data",
+   "label": "Team"
+  },
+  {
+   "fieldname": "column_break_bron",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bron",
+   "fieldtype": "Select",
+   "label": "Bron",
+   "options": "Inspectio2 .dat\nInspectio2 .mw\nOpen-Monuments\nRE Suite",
+   "default": "Open-Monuments"
+  },
+  {
+   "fieldname": "section_sync",
+   "fieldtype": "Section Break",
+   "label": "Sync metadata",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "last_modified_device",
+   "fieldtype": "Data",
+   "label": "Laatste apparaat (device ID)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "offline_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Offline tijdstempel",
+   "read_only": 1,
+   "description": "Tijdstip waarop de wijziging offline is opgeslagen (voor conflict resolution D011)"
+  }
+ ],
+ "links": [],
+ "modified": "2026-03-24 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Monuments Inspect",
+ "name": "Inspectie",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Monumentenwachter",
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "monument,inspecteur,datum",
+ "show_title_field_in_link": 1,
+ "sort_field": "jaar",
+ "sort_order": "DESC",
+ "states": [
+  {"title": "Concept", "color": "Gray"},
+  {"title": "In uitvoering", "color": "Blue"},
+  {"title": "Afgerond", "color": "Green"},
+  {"title": "Gearchiveerd", "color": "Red"}
+ ],
+ "title_field": "inspectienummer"
+}

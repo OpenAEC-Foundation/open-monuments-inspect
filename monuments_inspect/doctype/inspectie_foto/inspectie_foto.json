@@ -1,0 +1,93 @@
+{
+  "name": "InspectieFoto",
+  "module": "Monuments Inspect",
+  "doctype": "DocType",
+  "description": "Foto met metadata, gekoppeld aan Bevinding of Inspectie",
+  "fields": [
+    {
+      "fieldname": "inspectie",
+      "fieldtype": "Link",
+      "label": "Inspectie",
+      "options": "Inspectie",
+      "reqd": 1
+    },
+    {
+      "fieldname": "bevinding",
+      "fieldtype": "Link",
+      "label": "Bevinding (optioneel)",
+      "options": "Bevinding",
+      "description": "Leeg als foto bij de inspectie als geheel hoort"
+    },
+    {
+      "fieldname": "bestand",
+      "fieldtype": "Attach Image",
+      "label": "Foto (WebP, max 15 MB voor thermisch / 5 MB regulier)",
+      "reqd": 1
+    },
+    {
+      "fieldname": "uuid",
+      "fieldtype": "Data",
+      "label": "UUID",
+      "read_only": 1,
+      "description": "Unieke identifier — foto's worden NOOIT overschreven (D011)"
+    },
+    {
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "label": "Fototype",
+      "options": "Regulier\nThermisch\nDetail\nOverzicht\nVergelijking",
+      "default": "Regulier"
+    },
+    {
+      "fieldname": "meta_tab",
+      "fieldtype": "Tab Break",
+      "label": "EXIF-metadata"
+    },
+    {
+      "fieldname": "opnamedatum",
+      "fieldtype": "Datetime",
+      "label": "Opnamedatum (EXIF)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "gps_lat",
+      "fieldtype": "Float",
+      "label": "GPS breedtegraad",
+      "read_only": 1
+    },
+    {
+      "fieldname": "gps_lon",
+      "fieldtype": "Float",
+      "label": "GPS lengtegraad",
+      "read_only": 1
+    },
+    {
+      "fieldname": "camera_model",
+      "fieldtype": "Data",
+      "label": "Camera (EXIF)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "bestandsgrootte_kb",
+      "fieldtype": "Int",
+      "label": "Bestandsgrootte (KB)",
+      "read_only": 1
+    },
+    {
+      "fieldname": "bijschrift",
+      "fieldtype": "Small Text",
+      "label": "Bijschrift"
+    },
+    {
+      "fieldname": "richting",
+      "fieldtype": "Select",
+      "label": "Opnamerichting",
+      "options": "\nNoord\nNoordoost\nOost\nZuidoost\nZuid\nZuidwest\nWest\nNoordwest"
+    }
+  ],
+  "permissions": [
+    { "role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Inspecteur", "read": 1, "write": 1, "create": 1 },
+    { "role": "Klant", "read": 1 }
+  ]
+}
