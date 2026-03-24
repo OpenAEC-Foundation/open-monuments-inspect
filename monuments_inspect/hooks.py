@@ -1,10 +1,11 @@
+from . import __version__ as app_version
+
 app_name = "monuments_inspect"
 app_title = "Open-Monuments Inspect"
 app_publisher = "OpenAEC Foundation"
 app_description = "NEN 2767 conditiemeting, ERM-gebrekregistratie en thermografische inspectie voor monumenten."
 app_email = "info@openaec.org"
 app_license = "lgpl-3.0"
-app_version = "0.1.0"
 
 required_apps = ["frappe", "erpnext", "monuments_core"]
 
