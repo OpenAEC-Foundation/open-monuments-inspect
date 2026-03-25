@@ -81,7 +81,7 @@
   },
   {
    "fieldname": "datum",
-   "fieldtype": "Date",
+   "fieldtype": "Data",
    "label": "Datum",
    "in_list_view": 1
   },
