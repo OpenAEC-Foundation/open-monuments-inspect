@@ -23,6 +23,6 @@ doc_events = {
         "before_save": "monuments_inspect.monuments_inspect.doctype.bevinding.bevinding.bereken_conditiescore",
     },
     "ThermografischeInspectie": {
-        "before_save": "monuments_inspect.monuments_inspect.doctype.thermografische_inspectie.thermografische_inspectie.bereken_delta_t",
+        "before_save": "monuments_inspect.monuments_inspect.doctype.thermografischeinspectie.thermografischeinspectie.bereken_delta_t",
     },
 }
