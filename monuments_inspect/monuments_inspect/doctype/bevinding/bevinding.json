@@ -116,9 +116,10 @@
   },
   {
    "fieldname": "erm_code",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "ERM-gebrekencode",
-   "description": "Bijv. ST-003 (steenwerk: voegwerk uitvallen)"
+   "options": "Erm Gebrek",
+   "description": "Koppeling aan de ERM Gebrekenlijst (URL 2005)"
   },
   {
    "fieldname": "column_break_nen2767",

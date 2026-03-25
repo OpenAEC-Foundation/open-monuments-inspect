@@ -71,8 +71,9 @@
   },
   {
    "fieldname": "inspecteur",
-   "fieldtype": "Data",
-   "label": "Inspecteur"
+   "fieldtype": "Link",
+   "label": "Inspecteur",
+   "options": "User"
   },
   {
    "fieldname": "column_break_datum",
@@ -80,7 +81,7 @@
   },
   {
    "fieldname": "datum",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Datum",
    "in_list_view": 1
   },

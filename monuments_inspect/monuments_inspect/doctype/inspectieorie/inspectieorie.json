@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-03-25 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "description": "ORIE risicobeoordeling bij een inspectie (35 vragen, risicoklasse 1-4)",
+ "track_changes": 1,
+ "field_order": [
+  "inspectie",
+  "risicoklasse",
+  "column_break_algemeen",
+  "datum",
+  "section_bereikbaarheid",
+  "bereikbaarheid",
+  "bijzonderheden",
+  "section_resultaat",
+  "orie_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "inspectie",
+   "fieldtype": "Link",
+   "label": "Inspectie",
+   "options": "Inspectie",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "risicoklasse",
+   "fieldtype": "Select",
+   "label": "Risicoklasse",
+   "options": "\n1\n2\n3\n4",
+   "in_list_view": 1,
+   "description": "1 = laag risico, 4 = hoog risico"
+  },
+  {
+   "fieldname": "column_break_algemeen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "datum",
+   "fieldtype": "Date",
+   "label": "Datum beoordeling",
+   "default": "Today"
+  },
+  {
+   "fieldname": "section_bereikbaarheid",
+   "fieldtype": "Section Break",
+   "label": "Bereikbaarheid en bijzonderheden"
+  },
+  {
+   "fieldname": "bereikbaarheid",
+   "fieldtype": "Long Text",
+   "label": "Bereikbaarheid"
+  },
+  {
+   "fieldname": "bijzonderheden",
+   "fieldtype": "Long Text",
+   "label": "Bijzonderheden"
+  },
+  {
+   "fieldname": "section_resultaat",
+   "fieldtype": "Section Break",
+   "label": "ORIE vragenlijst"
+  },
+  {
+   "fieldname": "orie_json",
+   "fieldtype": "JSON",
+   "label": "Vraag/antwoord data",
+   "description": "JSON array met 35 vragen en antwoorden uit de ORIE checklist"
+  }
+ ],
+ "links": [],
+ "modified": "2026-03-25 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Monuments Inspect",
+ "name": "InspectieORIE",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Monumentenwachter",
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
